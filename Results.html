@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stellar Distribution and Morphology of Face-On Spiral Galaxies</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  	
+  	<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+            background-image: URL("Images/PIA12066_hires.jpg");
+        }
+
+		figure {
+			display: inline-block;
+			margin: 1rem;
+			text-align: center;
+		}
+	
+		figcaption {
+			font-style: italic;
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+		
+	    .mybordered-image {
+        	border: 2px solid white; /* Adjust the border width and color as needed */
+        	border-radius: 5px; /* Optional: add rounded corners */
+ 		}
+ 		
+        .galaxy {
+            position: relative;
+            align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 2s ease-in-out;
+        }
+	    .responsive-image {
+       		width: 100%;
+        	height: auto;
+		}
+		
+		.center-container {
+			min-height: calc(100vh - 2rem); /* Adjust the height as needed */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		.carousel-item {
+			max-height: 70vh; /* Adjust this value based on your desired slide height */
+			overflow: hidden;
+		}
+	
+		.carousel-item img {
+			width: 95%;
+			height: auto;
+			object-fit: cover;
+		}
+		
+		.offcanvas {
+       		height: 70vh;
+    	}
+    
+    	.main-container {
+        	margin-left: 0;
+        	transition: margin-left 0.3s ease;
+    	}
+    
+    	.main-container.open {
+        	margin-left: 250px; /* Adjust this value based on the desired width of the navigation bar */
+    }
+
+    </style>
+</head>
+<body>
+<!-- Offcanvas (Navigation Bar) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Navigation</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="nav flex-column">
+             <a class="nav-link" href="KaylaB.html">Home Page</a>
+       
+            <a class="nav-link" href="DataCollection.html">Data Collection</a>
+            <a class="nav-link" href="DataReduction.html">Data Reduction</a>
+            <a class="nav-link" href="analysis.html">Analysis</a>
+            <a class="nav-link" href="Results.html">Results</a>
+            <a class="nav-link" href="References.html">References</a>
+            <!-- Add more links as needed -->
+        </nav>
+    </div>
+</div>
+<!-- End of Offcanvas -->
+
+<!-- Main Content -->
+<div class="main-container">
+    <!-- Add a button to toggle the navigation bar -->
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Toggle Navigation
+    </button>
+
+
+    <div class="container">
+        <h1 class="text-center my-5">Results</h1>
+
+        <!-- Add your content here -->
+
+    My python code produced a table of values corresponding to the magnitudes of the cores and 'not the core' (labeled as arms) of each galaxy and the B-V values of each galaxy. The values for M51 seem a bit questionable to me, but it may be due to the way I defined the boundaries of the galaxy given that it is an interacting galaxy. An image of the data table values is below:
+	<div class="row">    
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10">
+	<figure>
+	<img src="Images/resultsimage.png" alt="Data Table of Calculated Mag and B-V Values for the Core and 'Not the Core' (arms) of Each Galaxy"  class="responsive-image">
+	<figcaption>Data Table of Calculated Mag and B-V Values for the Core and 'Not the Core' (arms) of Each Galaxy</figcaption>
+	</figure>
+	</div>
+	</div>
+	
+    I then took the ratios of the magnitudes between the core vs 'not the core' and the ratio of the B-V numbers between the core vs 'not the core' and inputted this into a data table. I then took the standard deviations between the different galaxies. I excluded M51 from this as its values skewwed the ratios and standard deviations quite dramatically. An image of this data table is below:
+	<div class="row">    
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10">
+	<figure>
+	<img src="Images/ratiosimage.png" alt="Ratios of the Magnitude and B-V Numbers for Each Galaxy Between the Core and Arms ('Not the Core') and the Corresponding Standard Deviations "  class="responsive-image">
+	<figcaption>Ratios of the Magnitude and B-V Numbers for Each Galaxy Between the Core and Arms ('Not the Core') and the Corresponding Standard Deviations</figcaption>
+	</figure>
+	</div>
+	</div>
+
+    What I found is that the B-V ratios indicated the core is hotter than the arms of the galaxies, which could be due to the fact that the stellar population is denser in the core. The ratios also showed that the magnitude of the core is higher than the magnitude of the arms. The standard deviation of the magnitudes was very low, especially compared to the standard deviation of the B-V numbers. What I gathered from this and by visually observing the morphology of the different galaxies is that while the magnitudes stayed relatively constant, the deviations in the B-V numbers indicate that the difference in colors - indicative of temperature and age - likely vary largely in the 'not core' regions of the galaxy. For example comparing M100 and NGC 3938 that had similar B-V ratios (0.97 and 0.94) had more spread out and wispy/asymmetrical arms. Compared to NGC 3344, however, that had a much lower B-V ratio (0.59 --> indicating the colors of the core and arms varied greatly), had more compact arms.
+	<div class="row">    
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10">
+	<figure>
+    <img src="Images/M51Bfilter.png" alt="M51 Has Fairly Spread Out and Asymmetrical Arms"  class="responsive-image mybordered-image"> 
+	<figcaption>M51 Has Fairly Spread Out and Asymmetrical Arms</figcaption>
+	</figure>
+	</div>
+	</div>
+
+	<div class="row">    
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10">
+	<figure>
+    <img src="Images/NGC3344Bfilter.png" alt="NGC 3344 is Fairly Compact and Symmetrical"  class="responsive-image mybordered-image"> 
+	<figcaption>NGC 3344 is Fairly Compact and Symmetrical</figcaption>
+	</figure>
+	</div>
+	</div>
+
+	<div class="row">    
+	<div class="col-md-1"></div>
+
+	<div class="col-md-10">
+	<figure>
+    <img src="Images/NGC3938Bfilter.png" alt="NGC 3938 Has Fairly Sprawled Out and Wispy Arms"  class="responsive-image mybordered-image">
+	<figcaption>NGC 3938 Has Fairly Sprawled Out and Wispy Arms</figcaption>
+	</figure>
+	</div>
+	</div>
+
+    There are indeed limitations to my results. The definition of my boundaries, especially the boundaries of the outer galaxy may or may not be fully inclusive of every aspect of the galaxy as the arms are irregular bodies. Further, if I had more time, I would like to make my photmetry methods more robust. I would do this by performing foreground star corrections as well as create stellar population models to be able to analyze more intricate parts of the arms. Lastly, it is difficult and a bit presumptious to make assumptions about the correlation between magnitude, B-V numbers, and morphology with only 6 data points. While I can make some correlated observations, I would need more data points from different galaxies.
+    <br><br>Overall, I learned a lot about the trials and errors, computational, and synthesis aspects of dealing with data and a self-produced scientfic project. There are a multitude of directions I could still take with my data. I'm grateful for the opportunity to develop my knowledge and skills through a project like this.  
+    </div>
+    <script>
+    $(document).ready(function () {        $('#offcanvasExample').on('shown.bs.offcanvas', function () {
+            $('.main-container').addClass('open');
+        });
+
+        $('#offcanvasExample').on('hidden.bs.offcanvas', function () {
+            $('.main-container').removeClass('open');
+        });
+    });
+    </script>
+    
+</div>
+<!-- End of Main Content -->
+    
+    <p>  </p>
+    <br><br>
+</body>
+</html>
