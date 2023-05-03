@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stellar Distribution and Morphology of Face-On Spiral Galaxies</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  	
+  	<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+            background-image: URL("Images/PIA12066_hires.jpg");
+        }
+
+        .galaxy {
+            position: relative;
+            align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 2s ease-in-out;
+        }
+
+    	.responsive-image {
+       		width: 100%;
+        	height: auto;
+		}
+		
+		.center-container {
+			min-height: calc(100vh - 2rem); /* Adjust the height as needed */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		.carousel-item {
+			max-height: 70vh; /* Adjust this value based on your desired slide height */
+			overflow: hidden;
+		}
+	
+		.carousel-item img {
+			width: 95%;
+			height: auto;
+			object-fit: cover;
+		}
+		
+		.offcanvas {
+       		height: 70vh;
+    	}
+    
+    	.main-container {
+        	margin-left: 0;
+        	transition: margin-left 0.3s ease;
+    	}
+    
+    	.main-container.open {
+        	margin-left: 250px; /* Adjust this value based on the desired width of the navigation bar */
+    }
+
+    </style>
+</head>
+<body>
+<!-- Offcanvas (Navigation Bar) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Navigation</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="nav flex-column">
+             <a class="nav-link" href="KaylaB.html">Home Page</a>
+       
+            <a class="nav-link" href="DataCollection.html">Data Collection</a>
+            <a class="nav-link" href="DataReduction.html">Data Reduction</a>
+            <a class="nav-link" href="analysis.html">Analysis</a>
+            <a class="nav-link" href="Results.html">Results</a>
+            <a class="nav-link" href="References.html">References</a>
+
+            <!-- Add more links as needed -->
+        </nav>
+    </div>
+</div>
+<!-- End of Offcanvas -->
+
+<!-- Main Content -->
+<div class="main-container">
+    <!-- Add a button to toggle the navigation bar -->
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Toggle Navigation
+    </button>
+
+
+    <div class="container">
+        <h1 class="text-center my-5">References</h1>
+
+        <!-- Add your content here -->
+
+<p>Breda, I., Papaderos, P., Gomes, J. M., Vílchez, J. M., Ziegler, B. L., Hirschmann, M., Cardoso, L. S., Lagos, P., & Buitrago, F. (2020). <i>Stellar age gradients and inside-out star formation quenching in galaxy bulges. Astronomy & Astrophysics,</i> 635. https://doi.org/10.1051/0004-6361/201937193 </p>
+<p><i>Home.</i> aavso. (n.d.). Retrieved May 2, 2023, from https://www.aavso.org/ </p>
+<p>Photutils. (n.d.). Retrieved May 2, 2023, from https://photutils.readthedocs.io/en/stable/ </p>
+<p>Wang, X., Li, W., Filippenko, A. V., Krisciunas, K., Suntzeff, N. B., Li, J., Zhang, T., Deng, J., Foley, R. J., Ganeshalingam, M., Li, T., Lou, Y. Q., Qiu, Y., Shang, R., Silverman, J. M., Zhang, S., & Zhang, Y. (2008). Optical and near‐infrared observations of the highly reddened, rapidly expanding type Ia supernova SN 2006X in M100. <i>The Astrophysical Journal</i>, 675(1), 626–643. https://doi.org/10.1086/526413</p> 
+<p>Vizier. (n.d.). Retrieved May 2, 2023, from https://vizier.cfa.harvard.edu/viz-bin/VizieR </p>
+<p>Zhang, J., Wang, X., Vinkó, J., Wheeler, J. C., Chang, L., Yang, Y., Wang, L., Zhai, Q., Rui, L., Mo, J., Zhang, T., Zhang, Y., Wang, J., Mao, J., Wang, C., Yi, W., Xin, Y., Li, W., Lun, B., … Bai, J. (2018). Optical observations of the young type ic supernova SN 2014L in M99. <i>The Astrophysical Journal</i>, 863(1), 109. https://doi.org/10.3847/1538-4357/aaceaf 
+
+    </div>
+    <script>
+    $(document).ready(function () {
+        $('#offcanvasExample').on('shown.bs.offcanvas', function () {
+            $('.main-container').addClass('open');
+        });
+
+        $('#offcanvasExample').on('hidden.bs.offcanvas', function () {
+            $('.main-container').removeClass('open');
+        });
+    });
+    </script>
+    
+</div>
+<!-- End of Main Content -->
+    
+    <p>  </p>
+    <br><br>
+</body>
+</html>
